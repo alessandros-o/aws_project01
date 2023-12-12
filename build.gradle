@@ -30,10 +30,15 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework:spring-jms'
+	implementation 'org.testng:testng:7.1.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.1000')
 	implementation 'com.amazonaws:aws-java-sdk-sns'
+	implementation 'com.amazonaws:aws-java-sdk-s3'
+	implementation 'com.amazonaws:aws-java-sdk-sqs'
+	implementation group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '2.1.1'
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
